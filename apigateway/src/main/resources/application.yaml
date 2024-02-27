@@ -9,10 +9,10 @@ spring:
     gateway:
       routes:
         - id: Microservice1
+          uri: http://localhost:8080/
+          predicates:
+            - Path=/acts/**
+        - id: Microservice2
           uri: http://localhost:8081/
           predicates:
-            - Path=/serviceA/**
-        - id: Microservice2
-          uri: http://localhost:8082/
-          predicates:
-            - Path=/serviceB/**
+            - Path=/users/**

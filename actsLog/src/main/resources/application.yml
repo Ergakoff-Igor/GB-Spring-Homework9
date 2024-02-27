@@ -1,8 +1,10 @@
 server:
     port: 8080
+
 spring:
     application:
         name: ActsLogService
+
 db:
     deleteById: DELETE FROM actTable 
         WHERE id=?
